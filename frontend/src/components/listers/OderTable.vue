@@ -67,6 +67,11 @@
             headers: 
                 [
                     { text: "id", value: "id" },
+                    { text: "foodId", value: "foodId" },
+                    { text: "options", value: "options" },
+                    { text: "address", value: "address" },
+                    { text: "customerId", value: "customerId" },
+                    { text: "storeId", value: "storeId" },
                 ],
             oder : [],
             newValue: {},
@@ -84,6 +89,11 @@
             this.values = temp.data._embedded.oders;
 
             this.newValue = {
+                'foodId': '',
+                'options': [],
+                'address': '',
+                'customerId': '',
+                'storeId': '',
             }
         },
         methods: {

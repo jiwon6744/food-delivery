@@ -23,6 +23,24 @@ public class Delivery  {
     
     
     private Long id;
+    
+    
+    
+    
+    
+    private String status;
+    
+    
+    
+    
+    
+    private String orderId;
+    
+    
+    
+    
+    
+    private String address;
 
     @PostPersist
     public void onPostPersist(){
@@ -46,6 +64,48 @@ public class Delivery  {
 
 
 
+    public static void 주문정보복제(OrderPlaced orderPlaced){
+
+        /** Example 1:  new item 
+        Delivery delivery = new Delivery();
+        repository().save(delivery);
+
+        */
+
+        /** Example 2:  finding and process
+        
+        repository().findById(orderPlaced.get???()).ifPresent(delivery->{
+            
+            delivery // do something
+            repository().save(delivery);
+
+
+         });
+        */
+
+        
+    }
+    public static void updateStatus(CookFinished cookFinished){
+
+        /** Example 1:  new item 
+        Delivery delivery = new Delivery();
+        repository().save(delivery);
+
+        */
+
+        /** Example 2:  finding and process
+        
+        repository().findById(cookFinished.get???()).ifPresent(delivery->{
+            
+            delivery // do something
+            repository().save(delivery);
+
+
+         });
+        */
+
+        
+    }
 
 
 }

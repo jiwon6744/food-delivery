@@ -68,6 +68,11 @@
             me.values = temp.data._embedded.oders;
             
             me.newValue = {
+                'foodId': '',
+                'options': [],
+                'address': '',
+                'customerId': '',
+                'storeId': '',
             }
         },
         methods:{

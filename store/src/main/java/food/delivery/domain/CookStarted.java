@@ -10,6 +10,11 @@ import lombok.*;
 public class CookStarted extends AbstractEvent {
 
     private Long id;
+    private String status;
+    private String foodId;
+    private String orderId;
+    private List<String> options;
+    private String costomerId;
 
     public CookStarted(FoodCooking aggregate){
         super(aggregate);

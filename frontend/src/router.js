@@ -17,6 +17,7 @@ import FoodCookingManager from "./components/listers/FoodCookingCards"
 import FoodCookingDetail from "./components/listers/FoodCookingDetail"
 
 
+
 export default new Router({
     // mode: 'history',
     base: process.env.BASE_URL,
@@ -63,6 +64,7 @@ export default new Router({
                 name: 'FoodCookingDetail',
                 component: FoodCookingDetail
             },
+
 
 
 

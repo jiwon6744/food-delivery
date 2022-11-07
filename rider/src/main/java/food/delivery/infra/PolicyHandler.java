@@ -23,6 +23,40 @@ public class PolicyHandler{
     @StreamListener(KafkaProcessor.INPUT)
     public void whatever(@Payload String eventString){}
 
+    @StreamListener(value=KafkaProcessor.INPUT, condition="headers['type']=='OrderPlaced'")
+    public void wheneverOrderPlaced_주문정보복제(@Payload OrderPlaced orderPlaced){
+
+        OrderPlaced event = orderPlaced;
+        System.out.println("\n\n##### listener 주문정보복제 : " + orderPlaced + "\n\n");
+
+
+        
+
+        // Sample Logic //
+        Delivery.주문정보복제(event);
+        
+
+        
+
+    }
+
+    @StreamListener(value=KafkaProcessor.INPUT, condition="headers['type']=='CookFinished'")
+    public void wheneverCookFinished_UpdateStatus(@Payload CookFinished cookFinished){
+
+        CookFinished event = cookFinished;
+        System.out.println("\n\n##### listener UpdateStatus : " + cookFinished + "\n\n");
+
+
+        
+
+        // Sample Logic //
+        Delivery.updateStatus(event);
+        
+
+        
+
+    }
+
 }
 
 
